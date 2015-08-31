@@ -1,4 +1,19 @@
 <h2>List of my files</h2>
 <p class="text-muted">Here is the list of all files You own blah blah</p>
-
-<div ng-repeat="item in files"  ng-include="'templates/files/single.html'" ng-controller="SingleFileController" ng-init="initFor(item)"></div>
+<div class="clearfix" style="position: relative;">
+<md-menu class="pull-right" md-position-mode="target-right target">
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+            <i class="fa fa-{{display_as.icon}}"></i>
+    </md-button>
+    <md-menu-content width="4">
+        <md-menu-item ng-repeat="mode in display_modes">
+            <md-button ng-click="setDisplayType(mode)">
+                <i class="fa fa-{{mode.icon}}"> {{mode.label}}</i>
+            </md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>
+</div>
+<div style="position: relative">
+<div ng-include="display_as.template"  class="fade"></div>
+</div>
