@@ -10,6 +10,23 @@ angular.module('Handy.controllers.files.list', ['ngRoute'])
     }])
 
     .controller('FilesListController', ['$scope', function($scope) {
+        $scope.display_modes = [
+            {
+                'name': 'list',
+                'label': 'List',
+                'icon': 'list',
+                'template': 'templates/files/display_files_as_list.html'
+            },
+            {
+                'name': 'gallery',
+                'label': 'Gallery',
+                'icon': 'image',
+                'template': 'templates/files/display_files_as_gallery.html'
+            }
+        ];
+
+        $scope.display_as = $scope.display_modes[0];
+
         $scope.files = [
             {
                 name: "Ziomek.jpg",
@@ -29,9 +46,16 @@ angular.module('Handy.controllers.files.list', ['ngRoute'])
                 modified: "14-12-2014",
                 url: "http://i.stack.imgur.com/aP2dv.gif"
             }
-
-
         ];
+
+        $scope.openMenu = function($mdOpenMenu, ev) {
+            $mdOpenMenu(ev);
+        };
+
+        $scope.setDisplayType = function(type){
+            $scope.display_as = type;
+        }
+
     }]) .controller('SingleFileController', ['$scope', function($scope) {
 
         $scope.file = {};
