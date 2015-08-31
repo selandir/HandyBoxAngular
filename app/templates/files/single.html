@@ -1,8 +1,21 @@
-<md-list-item class="md-3-line">
+<md-list-item class="md-3-line file-item">
     <img ng-src="{{ file.url }}" class="md-avatar" alt="{{ file.name }}" />
     <div class="md-list-item-text">
         <h3>{{ file.name }}</h3>
         <h4>{{ file.size }}</h4>
         <p>{{ file.modified }}</p>
+    </div>
+    <div class="buttons">
+        <div class="caption">
+            <md-button class="md-icon-button" aria-label="Settings">
+                <i class="fa fa-share"></i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Settings">
+                <i class="fa fa-edit"></i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Settings">
+                <i class="fa fa-trash"></i>
+            </md-button>
+        </div>
     </div>
 </md-list-item>
