@@ -27,3 +27,49 @@
   opacity: 0;
   top: -30px;
 }
+.file-list .file-item{
+  transition: background ease-in-out 0.2s, padding ease-in-out 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.file-list .file-item:hover{
+  background-color: #e1e1e1;
+  padding-left: 10px;
+}
+
+.file-list .file-item .buttons .caption{
+  margin-top: 22px;
+}
+
+
+
+.file-list .file-item .buttons{
+  position: absolute;
+  transition: right ease-in-out 0.2s, opacity ease-in-out 0.2s;
+  opacity:0;
+  top:0;
+  right:-30px;
+  height: 100%;
+  padding-right: 20px;
+}
+
+@media (max-width: 992px){
+  .file-list .file-item .buttons{
+    opacity: 1;
+    right:0;
+  }
+}
+
+.file-list .file-item:hover .buttons{
+  opacity: 1;
+  right: 0;
+}
+
+.file-list-gallery .gallery-item .preview{
+  width: 100%;
+  height: 200px;
+  margin-bottom:10px;
+  background-position: center;
+  background-size: cover;
+}
