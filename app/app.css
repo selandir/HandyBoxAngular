@@ -12,8 +12,8 @@ body{
 }
 .fade.ng-enter,
 .fade.ng-leave {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .fade.ng-enter {
   opacity: 0;
@@ -38,7 +38,7 @@ body{
 }
 
 .file-list .file-item:hover{
-  background-color: #e1e1e1;
+  background-color: rgba(33, 150, 243, 0.12);
   padding-left: 10px;
 }
 

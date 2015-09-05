@@ -7,6 +7,7 @@ angular.module('Handy', [
     'ngResource',
     'Handy.config',
     'Handy.controllers.panel.login',
+    'Handy.controllers.panel.register',
     'Handy.controllers.files.list',
     'Handy.models.file',
     'Handy.components.confirm',
