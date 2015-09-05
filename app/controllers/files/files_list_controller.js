@@ -9,7 +9,10 @@ angular.module('Handy.controllers.files.list', ['ngRoute'])
         });
     }])
 
-    .controller('FilesListController', ['$scope', function($scope) {
+    .controller('FilesListController', ['$scope', 'File', function($scope, File) {
+
+        File.get_root_folder();
+
         $scope.display_modes = [
             {
                 'name': 'list',
@@ -56,12 +59,23 @@ angular.module('Handy.controllers.files.list', ['ngRoute'])
             $scope.display_as = type;
         }
 
-    }]) .controller('SingleFileController', ['$scope', function($scope) {
+    }]) .controller('SingleFileController', ['$scope', 'HandyConfirm', 'HandyAlert', function($scope, HandyConfirm, HandyAlert) {
 
         $scope.file = {};
 
         $scope.initFor = function(file){
             $scope.file = file;
+        };
+
+        $scope.delete = function(){
+            HandyConfirm(function(){
+                HandyAlert.failure('Oh no!');
+            }, {
+                on_no: function(){
+                    HandyAlert.success('I thought You would do it... that\'s a relief');
+                },
+                title: 'Are You sure, that You want to delete this file?'
+            })
         }
 
     }]);
