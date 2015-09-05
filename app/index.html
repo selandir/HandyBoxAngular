@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/lightbox2/dist/css/lightbox.css">
     <link rel="stylesheet" href="components/bootswatch/paper.css">
+
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -35,23 +36,23 @@
         </h2>
         <span flex></span>
         <a href="#/panel/login">
-        <md-button class="md-icon-button" aria-label="Favorite">
-            <i class="fa fa-users"></i>
-        </md-button>
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <i class="fa fa-users"></i>
+            </md-button>
         </a>
         <a href="#/files/list">
-        <md-button class="md-icon-button" aria-label="More">
-           <i class="fa fa-files-o"></i>
-        </md-button>
+            <md-button class="md-icon-button" aria-label="More">
+                <i class="fa fa-files-o"></i>
+            </md-button>
         </a>
     </div>
 </md-toolbar>
 
 <div class="container">
 
-        <div style="margin-top: 20px; position: relative">
-    <div class="fade" ng-view></div>
-        </div>
+    <div style="margin-top: 20px; position: relative">
+        <div class="fade" ng-view></div>
+    </div>
 
 </div><!-- /.container -->
 
@@ -65,12 +66,20 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/lightbox2/dist/js/lightbox.min.js"></script>
 <script src="app.js"></script>
+<script src="config.js"></script>
 <script src="controllers/files/files_list_controller.js"></script>
 <script src="controllers/panel/panel_login_controller.js"></script>
+<script src="controllers/panel/panel_register_controller.js"></script>
+<script src="models/file.js"></script>
+<script src="components/handy_confirm.js"></script>
+<script src="components/handy_alert.js"></script>
+<script src="components/model_utils.js"></script>
+<script src="components/local_settings.js"></script>
 </body>
 </html>
